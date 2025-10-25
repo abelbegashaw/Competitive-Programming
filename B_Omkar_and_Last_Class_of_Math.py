@@ -6,7 +6,7 @@ for _ in range(t):
     d = 2
     while d * d <= n:
         if n % d == 0:
-            largest = d
+            largest = n // d
+            break
         d += 1
     print(largest, n - largest)
-    
