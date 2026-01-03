@@ -3,14 +3,11 @@ for _ in range(t):
     n, k = map(int, input().split())
     s = input()
     result = index = 0
+    last_one = float("-inf")
     while index < n:
         if s[index] == '0':
-            result += 1
+            result += index - k > last_one
         else:
-            curr_one = index
-            for i in range(index, min(index + k + 1, n)):
-                if s[i] == '1':
-                    curr_one = i
-            index = curr_one + k
+            last_one = index
         index += 1
     print(result)
