@@ -6,11 +6,11 @@ for _ in range(t):
     while index < n:
         if s[index] == '0':
             result += 1
-            index += 1
         else:
             curr_one = index
             for i in range(index, min(index + k + 1, n)):
                 if s[i] == '1':
                     curr_one = i
-            index = curr_one + k + 1
+            index = curr_one + k
+        index += 1
     print(result)
