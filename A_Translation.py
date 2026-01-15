@@ -1,0 +1,1 @@
+print("NO") if input() != input()[::-1] else print("YES")
