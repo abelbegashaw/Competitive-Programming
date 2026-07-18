@@ -2,8 +2,8 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     array = list(map(int, input().split()))
-    pos, neg = array.count(1), array.count(-1)
-    if pos % 2 == neg % 2 == 0:
-        print("YES")
+    delta = abs(array.count(1) - array.count(-1))
+    if n % 2 or delta % 2 or (delta // 2) % 2:
+        print("NO")
     else:
-        print("NO") 
+        print("YES") 
